@@ -3,6 +3,7 @@
 import { Disclosure } from "@headlessui/react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
+import ThemeBtn from "./ThemeBtn"
 
 
 
@@ -34,9 +35,11 @@ export default function Navbar(){
                                         : "border-transparent text-gray-500 dark:text-gray-300 dark:hover:text-white inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"}`}>
                                         Projects
                                     </Link>
+                                    <ThemeBtn />
                                 </div>
                             </div>
                             <div className="-mr-2 flex items-center sm:hidden">
+                                <ThemeBtn/>
                                 <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-400
                                 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-teal-500
                                 dark:hover:bg-gray-800">
