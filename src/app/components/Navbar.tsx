@@ -60,12 +60,12 @@ export default function Navbar(){
                     <div className="pt-2 pb-3 space-y-1">
                         <Link href="/" prefetch className={`${path == "/" ?
                         "bg-teal-50 border-teal-500 text-teal-500 block pl-2 pr-4 py-2 border-l-4 text-base font-medium dark:bg-gray-800"
-                        : "border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-white block pl-3 pr-4 py-2 dark:hover:bg-gray-700 border-l-4 text-base font-medium dark:text-white"}`}>
+                        : "border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-teal-500 block pl-3 pr-4 py-2 dark:hover:bg-gray-700 border-l-4 text-base font-medium dark:text-white"}`}>
                             Home
                         </Link>
                         <Link href="/projects" prefetch className={`${path == "/projects" ?
                         "bg-teal-50 border-teal-500 text-teal-500 block pl-2 pr-4 py-2 border-l-4 text-base font-medium dark:bg-gray-800"
-                        : "border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-white block pl-3 pr-4 py-2 dark:hover:bg-gray-700 border-l-4 text-base font-medium dark:text-white"}`}>
+                        : "border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-teal-500 block pl-3 pr-4 py-2 dark:hover:bg-gray-700 border-l-4 text-base font-medium dark:text-white"}`}>
                             Projects
                         </Link>
                     </div>                            
