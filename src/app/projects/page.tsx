@@ -39,7 +39,7 @@ export default async function Projects(){
                     data.map((project) => (
                         <article key={project._id} className="overflow-hidden dark:border-zinc-600 rounded-lg border border-gray-100 bg-white shadow-lg dark:bg-black dark:shadow-gray-700 shadow-teal-100">
                             <div className="h-56 w-full relative">
-                            <Image fill src={project.imageUrl} alt="Project image" className="w-full h-full object-cover"/>
+                            <Image fill sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 25vw, 20vw" src={project.imageUrl} alt="Project image" className="w-full h-full object-cover" priority/>
                             </div>
                             <div className="p-4 sm:p-6">
                                 <a href={project.link} target="_blank">
