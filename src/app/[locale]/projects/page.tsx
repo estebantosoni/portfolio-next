@@ -1,5 +1,6 @@
-import {client} from "../lib/sanity"
+import {client} from "../../lib/sanity"
 import Image from 'next/image'
+import {getTranslations} from 'next-intl/server'
 
 interface Data {
     title: string,
@@ -9,7 +10,15 @@ interface Data {
     imageUrl: string,
 }
 
+export async function generateMetadata() {
+    const t = await getTranslations("proyects");
+    return {
+        title: t("header")
+    }
+}
+
 async function getProjects(){
+    //Sanity.io syntax
     const query = `*[_type == "project"] {
                         title,
                         overview,
@@ -25,13 +34,14 @@ async function getProjects(){
 
 export default async function Projects(){
     
+    const t = await getTranslations("proyects");
+    
     const data : Data[] = await getProjects();
-
     return (
         <div className="divide-y divide-gray-200 dark:divide-gray-700">
             <div className="space-y-2 pt-6 pb-8 md:space-y-5">
                 <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-                    All Projects
+                    {t("title")}
                 </h1>
             </div>
             <div className="grid gap-y-8 sm:gap-6 sm:grid-cols-2 md:gap-6 lg:grid-cols-3 lg:gap-10 pt-8">

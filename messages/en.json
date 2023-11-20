@@ -1,0 +1,14 @@
+{
+    "navbar": {
+        "home": "Home",
+        "proyects": "Proyects"
+    },
+    "homepage": {
+        "title": "Home",
+        "description": "Hi! My name is Esteban and I am a Backend Developer"
+    },
+    "proyects": {
+        "header": "Proyects",
+        "title": "My proyects"
+    }
+}

@@ -4,12 +4,13 @@ import { Disclosure } from "@headlessui/react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import ThemeBtn from "./ThemeBtn"
+import { useLocale } from "next-intl"
 
-
-
-export default function Navbar(){
+export default function Navbar({props} : {props: string[]}){
 
     let path = usePathname() || "/"
+
+    const locale = useLocale();
 
     return(
     <Disclosure as="nav">
@@ -27,15 +28,21 @@ export default function Navbar(){
                                     </Link>
                                 </div>
                                 <div className="hidden sm:ml-6 sm:flex sm:space-x-8 sm:items-center">
-                                    <Link href="/" prefetch className={`${path === "/" ? "border-teal-500 dark:text-white h-full inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+                                    <Link href={`/${locale}`} prefetch className={`${path === "/" ? "border-teal-500 dark:text-white h-full inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
                                         : "border-transparent text-gray-500 dark:text-gray-300 dark:hover:text-white inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"}`}>
-                                        Home
+                                        {props[0]}
                                     </Link>
-                                    <Link href="/projects" prefetch className={`${path === "/projects" ? "border-teal-500 dark:text-white h-full inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+                                    <Link href={`/${locale}/projects`} prefetch className={`${path === "/projects" ? "border-teal-500 dark:text-white h-full inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
                                         : "border-transparent text-gray-500 dark:text-gray-300 dark:hover:text-white inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"}`}>
-                                        Projects
+                                        {props[1]}
                                     </Link>
                                     <ThemeBtn />
+                                    <Link href="/en" locale={locale == "es" ? "en" : "en"}>
+                                        EN
+                                    </Link>
+                                    <Link href="/es" locale={locale == "en" ? "es" : "es"}>
+                                        ES
+                                    </Link>
                                 </div>
                             </div>
                             <div className="-mr-2 flex items-center sm:hidden">
@@ -61,12 +68,12 @@ export default function Navbar(){
                         <Link href="/" prefetch className={`${path == "/" ?
                         "bg-teal-50 border-teal-500 text-teal-500 block pl-2 pr-4 py-2 border-l-4 text-base font-medium dark:bg-gray-800"
                         : "border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-teal-500 block pl-3 pr-4 py-2 dark:hover:bg-gray-700 border-l-4 text-base font-medium dark:text-white"}`}>
-                            Home
+                            {props[0]}
                         </Link>
-                        <Link href="/projects" prefetch className={`${path == "/projects" ?
+                        <Link href={`/${locale}/projects`} prefetch className={`${path == "/projects" ?
                         "bg-teal-50 border-teal-500 text-teal-500 block pl-2 pr-4 py-2 border-l-4 text-base font-medium dark:bg-gray-800"
                         : "border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-teal-500 block pl-3 pr-4 py-2 dark:hover:bg-gray-700 border-l-4 text-base font-medium dark:text-white"}`}>
-                            Projects
+                            {props[1]}
                         </Link>
                     </div>                            
                 </Disclosure.Panel>

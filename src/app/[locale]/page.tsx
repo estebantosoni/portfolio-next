@@ -1,12 +1,25 @@
 import Image from 'next/image'
 import Me from '@/app/assets/Kylo Ren.jpg'
+import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
+
+export async function generateMetadata() {
+  const t = await getTranslations("homepage");
+
+  return {
+      title: t("title"),
+  };
+}
 
 export default function Home() {
+  
+  const t = useTranslations("homepage");
+  
   return (
     <div className="divide-y divide-gray-100 dark:divide-gray-700">
       <div className="space-y-2 pt-6 pb-8 md:space-y-5">
         <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-13">
-          Home
+          {t("title")}
         </h1>
       </div>
       <div className="items-center space-y-2 xl:grid xl:grid-cols-3 xl:gap-x-8 xl:space-y-'0">
@@ -16,7 +29,7 @@ export default function Home() {
             Esteban Tosoni
           </h3>
           <p className='text-gray-500 dark:text-gray-300 text-center'>
-            Hi! My name is Esteban and I am a Backend Developer
+            {t("description")}
           </p>
           <div className='flex space-x-5 pt-6'>
             <a href="https://www.github.com" target='_blank'>
