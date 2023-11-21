@@ -24,7 +24,7 @@ export default function RootLayout({children, params}: {children: React.ReactNod
       <head>
         <link rel="shortcut icon" href={portfolio.src}/>
       </head>
-      <body className={`${inter.className} bg-white text-black dark:bg-[#090908] dark:text-white h-full selection:bg-gray-50 dark:selection:bg-gray-800`}>
+      <body className={`${inter.className} bg-white text-black dark:bg-[#090908] dark:text-white h-screen selection:bg-gray-50 dark:selection:bg-gray-800`}>
         <Provider>
           <Navbar props={[t("home"),t("proyects")]}/>
           <main className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
