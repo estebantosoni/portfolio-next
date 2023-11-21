@@ -21,7 +21,7 @@ export default function Navbar({props} : {props: string[]}){
                         <div className="flex justify-between h-16">
                             <div className="flex justify-between w-full">
                                 <div className="flex items-center">
-                                    <Link href="/">
+                                    <Link id="fullname" href="/">
                                         <h1 className="text-2xl font-medium">
                                             Esteban <span className="text-teal-500">Tosoni</span>
                                         </h1>

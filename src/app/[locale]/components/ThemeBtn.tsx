@@ -17,7 +17,7 @@ export default function ThemeBtn(){
     }
 
     return (
-        <button onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")} className="bg-teal-500/30 p-2 rounded-lg text-teal-500">
+        <button id="theme" onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")} className="bg-teal-500/30 p-2 rounded-lg text-teal-500">
             {
                 resolvedTheme === "dark" ?
                 (

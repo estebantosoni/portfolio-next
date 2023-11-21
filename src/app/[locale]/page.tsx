@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import Me from '@/app/assets/pic.jpg'
+import Me from '../../../public/pic.jpg'
 import { useTranslations } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
 
@@ -34,21 +34,21 @@ export default function Home() {
   return (
     <div className="divide-y divide-gray-100 dark:divide-gray-700">
       <div className="space-y-2 pt-6 pb-8 md:space-y-5">
-        <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-13">
+        <h1 className="font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-13">
           {t("title")}
         </h1>
       </div>
       <div className="items-center space-y-2 xl:grid xl:grid-cols-3 xl:gap-x-8 xl:space-y-'0">
         <div className="flex flex-col items-center align-top pt-8">
           <Image src={Me} alt="Pic" priority className='h-48 w-48 rounded-full object-cover object-top'/>
-          <h3 className='pt-4 pb-2 text-2xl font-bold leading-8 tracking-tight'>
+          <h2 className='pt-4 pb-2 text-2xl font-bold leading-8'>
             Backend <span className="text-teal-500">Developer</span>
-          </h3>
+          </h2>
           <p className='text-gray-500 dark:text-gray-300 text-center'>
             {t("description")}
           </p>
           <div className='flex space-x-5 pt-5'>
-            <a href="https://github.com/estebantosoni" target='_blank'>
+            <a href="https://github.com/estebantosoni" aria-label="Take a look at the projects" target='_blank'>
             <svg
               viewBox="0 0 1024 1024"
               fill="currentColor"
@@ -69,7 +69,7 @@ export default function Home() {
                 0-247.2-200.4-447.3-447.5-447.3z" />
             </svg>
             </a>
-            <a href="https://linkedin.com/in/esteban-tosoni" target='_blank'>
+            <a href="https://linkedin.com/in/esteban-tosoni" aria-label="Take a look at the profile" target='_blank'>
             <svg
               viewBox="0 0 1024 1024"
               fill="currentColor"

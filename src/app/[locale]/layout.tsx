@@ -2,7 +2,7 @@ import { Inter } from 'next/font/google'
 import '../globals.css'
 import Navbar from './components/Navbar'
 import { Provider } from './components/Provider'
-import portfolio from '../assets/portfolio.png'
+import portfolio from '../../../public/portfolio.png'
 
 import {useLocale, useTranslations} from 'next-intl'
 import {notFound} from 'next/navigation'
@@ -22,6 +22,8 @@ export default function RootLayout({children, params}: {children: React.ReactNod
   return (
     <html lang={locale} suppressHydrationWarning>
       <head>
+        <meta charSet='utf-8'/>
+        <meta name="portfolio" content="Backend developer Esteban Tosoni's work portfolio"/>
         <link rel="shortcut icon" href={portfolio.src}/>
       </head>
       <body className={`${inter.className} bg-white text-black dark:bg-[#090908] dark:text-white h-screen selection:bg-gray-50 dark:selection:bg-gray-800`}>
