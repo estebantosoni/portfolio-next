@@ -4,14 +4,16 @@ export default {
     type: "document",
     fields: [
         {
-            name: "title",
-            type: "string",
-            title: "Title"
-        },
-        {
-            name: "overview",
-            type: "string",
-            title: "Small overview"
+            name: "tech",
+            type: "array",
+            title: "Tech",
+            of: [
+                {
+                    name: "src",
+                    type: "image",
+                    title: "Tech"
+                },
+            ]
         },
         {
             name: "image",

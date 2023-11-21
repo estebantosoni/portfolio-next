@@ -2,9 +2,12 @@ import {client} from "../../lib/sanity"
 import Image from 'next/image'
 import {getTranslations} from 'next-intl/server'
 
+interface Tech {
+    src: string,
+}
+
 interface Data {
-    title: string,
-    overview: string,
+    tech: Tech[],
     link: string,
     _id: string,
     imageUrl: string,
@@ -20,8 +23,9 @@ export async function generateMetadata() {
 async function getProjects(){
     //Sanity.io syntax
     const query = `*[_type == "project"] {
-                        title,
-                        overview,
+                        "tech": tech[]{
+                            "src": asset->url,
+                        },
                         link,
                         _id,
                         "imageUrl": image.asset->url
@@ -47,21 +51,26 @@ export default async function Projects(){
             <div className="grid gap-y-8 sm:gap-6 sm:grid-cols-2 md:gap-6 lg:grid-cols-3 lg:gap-10 pt-8">
                 {
                     data.map((project) => (
-                        <article key={project._id} className="overflow-hidden dark:border-zinc-600 rounded-lg border border-gray-100 bg-white shadow-lg dark:bg-black dark:shadow-gray-700 shadow-teal-100">
+                        <article key={project._id} className="overflow-hidden dark:border-zinc-600 rounded-lg border border-gray-200 bg-white shadow-lg dark:bg-black dark:shadow-gray-700 shadow-teal-100">
                             <div className="h-56 w-full relative">
                             <Image fill sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 25vw, 20vw" src={project.imageUrl} alt="Project image" className="w-full h-full object-cover" priority/>
                             </div>
                             <div className="p-4 sm:p-6">
+                                <div className="flex space-x-2 mb-3 gap-3">
+                                    {project.tech.map((tech, index) => (
+                                        <Image src={tech.src} alt="tech icon" key={index} width="27" height="27" className="w-auto h-auto" priority/>
+                                    ))}
+                                </div>
                                 <a href={project.link} target="_blank">
                                     <h3 className="text-lg font-medium text-gray-900 dark:text-white">
-                                        {project.title}
+                                        {t("my-projects.project-1.title")}
                                     </h3>
                                 </a>
                                 <p className="line-clamp-3 mt-2 text-sm leading-relaxed text-gray-500 dark:text-gray-400">
-                                    {project.overview}
+                                    {t("my-projects.project-1.overview")}
                                 </p>
                                 <a href={project.link} target="_blank" className="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-teal-500">
-                                    Learn More!
+                                    {t("learn-more")}
                                     <span className="block transition-all group-hover:ms-0.5">
                                         &rarr;
                                     </span>

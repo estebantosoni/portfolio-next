@@ -5,10 +5,21 @@
     },
     "homepage": {
         "title": "Inicio",
-        "description": "Hola! Mi nombre es Esteban y soy un desarrollador backend"
+        "description": "Hola! Me llamo Esteban. Soy un desarrollador argentino apasionado por la programacion y que va en busca de desafíos.",
+        "education-title": "Educación",
+        "skills-title": "Habilidades",
+        "education-description": "Estoy recibido de Analista de Sistemas habiendo estudiado en el Instituto Politecnico Superior 'Gral. San Martin'.",
+        "skills-description": "Domino tecnologías del entorno .NET y busco especializarme cada vez más. Sin embargo, siempre estoy abierto a aprender nuevas tecnologías y buscar la forma de hacer algo práctico y útil con ellas."
     },
     "proyects": {
         "header": "Proyectos",
-        "title": "Mis proyectos"
+        "title": "Mis proyectos",
+        "learn-more": "Echa un vistazo!",
+        "my-projects": {
+            "project-1": {
+                "title": "CRUD de Angular + API Web",
+                "overview": "Proyectos del bootcamp de Neoris con Angular y .NET"
+            }
+        }
     }
 }

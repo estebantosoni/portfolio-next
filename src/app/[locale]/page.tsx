@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import Me from '@/app/assets/Kylo Ren.jpg'
+import Me from '@/app/assets/pic.jpg'
 import { useTranslations } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
 
@@ -11,10 +11,26 @@ export async function generateMetadata() {
   };
 }
 
+const highlightPhrases = (text: string, phrasesToHighlight: any[], highlightClass: string | undefined) => {
+  const escapedPhrases = phrasesToHighlight.map(phrase => phrase.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&'));
+  const regex = new RegExp(`\\b(${escapedPhrases.join('|').replace(/\./g, '\\.?')})\\b`, 'gi');
+
+  return text.split(regex).map((part: string, index: number) => (
+    index % 2 === 0 ? (
+      <span key={index}>{part}</span>
+    ) : (
+      <span key={index} className={highlightClass}>{part}</span>
+    )
+  ));
+};
+
+
 export default function Home() {
   
   const t = useTranslations("homepage");
-  
+  const phrasesToHighlightEducation = ['Analista de Sistemas', 'Systems Analyst'];
+  const phrasesToHighlightSkills = ['NET'];
+
   return (
     <div className="divide-y divide-gray-100 dark:divide-gray-700">
       <div className="space-y-2 pt-6 pb-8 md:space-y-5">
@@ -23,16 +39,16 @@ export default function Home() {
         </h1>
       </div>
       <div className="items-center space-y-2 xl:grid xl:grid-cols-3 xl:gap-x-8 xl:space-y-'0">
-        <div className="flex flex-col items-center pt-8">
+        <div className="flex flex-col items-center align-top pt-8">
           <Image src={Me} alt="Pic" priority className='h-48 w-48 rounded-full object-cover object-top'/>
           <h3 className='pt-4 pb-2 text-2xl font-bold leading-8 tracking-tight'>
-            Esteban Tosoni
+            Backend <span className="text-teal-500">Developer</span>
           </h3>
           <p className='text-gray-500 dark:text-gray-300 text-center'>
             {t("description")}
           </p>
-          <div className='flex space-x-5 pt-6'>
-            <a href="https://www.github.com" target='_blank'>
+          <div className='flex space-x-5 pt-5'>
+            <a href="https://github.com/estebantosoni" target='_blank'>
             <svg
               viewBox="0 0 1024 1024"
               fill="currentColor"
@@ -53,7 +69,7 @@ export default function Home() {
                 0-247.2-200.4-447.3-447.5-447.3z" />
             </svg>
             </a>
-            <a href="https://www.linkedin.com" target='_blank'>
+            <a href="https://linkedin.com/in/esteban-tosoni" target='_blank'>
             <svg
               viewBox="0 0 1024 1024"
               fill="currentColor"
@@ -67,31 +83,16 @@ export default function Home() {
               112.3-61.7 120.2 0 142.3 79.1 142.3 181.9v209.4z" />
             </svg>
             </a>
-            <a href="example@gmail.com" target='_blank'>
-              <svg
-                viewBox="0 0 1024 1024"
-                fill="currentColor"
-                className='w-8 h-8 text-teal-500 hover:text-teal-600'
-              >
-                <path d="M928 160H96c-17.7 0-32 14.3-32 32v640c0 17.7 14.3 32 32 
-                32h832c17.7 0 32-14.3 32-32V192c0-17.7-14.3-32-32-32zm-40 
-                110.8V792H136V270.8l-27.6-21.5 39.3-50.5 42.8 33.3h643.1l42.8-33.3 
-                39.3 50.5-27.7 21.5zM833.6 232L512 482 190.4 232l-42.8-33.3-39.3 
-                50.5 27.6 21.5 341.6 265.6a55.99 55.99 0 0068.7 0L888 
-                270.8l27.6-21.5-39.3-50.5-42.7 33.2z" />
-              </svg>
-            </a>
           </div>
         </div>
-        <div className='prose max-w-none prose-lg pt-8 pb-7 dark:prose-invert xl:col-span-2'>
+        <div className='prose max-w-none prose-lg pb-7 dark:prose-invert xl:col-span-2 pt-5'>
+          <h3>{t("education-title")}</h3>
           <p>
-            Little description about you
+          {highlightPhrases(t('education-description'), phrasesToHighlightEducation, 'text-teal-500')}
           </p>
+          <h3>{t("skills-title")}</h3>
           <p>
-            Why do you like programming?
-          </p>
-          <p>
-            What do you know about programming?
+          {highlightPhrases(t('skills-description'), phrasesToHighlightSkills, 'text-teal-500')}
           </p>
         </div>
       </div>

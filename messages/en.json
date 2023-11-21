@@ -5,10 +5,21 @@
     },
     "homepage": {
         "title": "Home",
-        "description": "Hi! My name is Esteban and I am a Backend Developer"
+        "description": "Hello! My name is Esteban. I am an Argentine developer passionate about programming and is looking for challenges.",
+        "education-title": "Education",
+        "skills-title": "Skills",
+        "education-description": "I am a Systems Analyst having studied at the Instituto Politecnico Superior 'Gral. San Martin'.",
+        "skills-description": "I master technologies in the .NET environment and seek to specialize more and more. However, I am always open to learning new technologies and looking for ways to do something practical and useful with them."
     },
     "proyects": {
         "header": "Proyects",
-        "title": "My proyects"
+        "title": "My proyects",
+        "learn-more": "Learn More!",
+        "my-projects": {
+            "project-1": {
+                "title": "Angular CRUD + Web API",
+                "overview": "Neoris bootcamp projects with .NET + Angular"
+            }
+        }
     }
 }
