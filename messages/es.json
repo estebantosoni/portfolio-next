@@ -17,8 +17,12 @@
         "learn-more": "Echa un vistazo!",
         "my-projects": {
             "project-1": {
-                "title": "CRUD de Angular + API Web",
-                "overview": "Proyectos del bootcamp de Neoris con Angular y .NET"
+                "title": "CRUD en Angular + API Web",
+                "overview": "Proyectos de bootcamp."
+            },
+            "project-2": {
+                "title": "Clon de Twitter",
+                "overview": "CRUD de posts de Twitter con Next.js y Supabase."
             }
         }
     }

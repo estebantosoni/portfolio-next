@@ -18,7 +18,11 @@
         "my-projects": {
             "project-1": {
                 "title": "Angular CRUD + Web API",
-                "overview": "Neoris bootcamp projects with .NET + Angular"
+                "overview": "Bootcamp projects."
+            },
+            "project-2": {
+                "title": "X Clone",
+                "overview": "Twitter posts CRUD with Next.js and Supabase."
             }
         }
     }
