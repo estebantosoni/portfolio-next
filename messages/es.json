@@ -16,13 +16,13 @@
         "title": "Mis proyectos",
         "learn-more": "Echa un vistazo!",
         "my-projects": {
-            "project-1": {
-                "title": "CRUD en Angular + API Web",
-                "overview": "Proyectos de bootcamp."
+            "1": {
+                "title": "CRUD en Angular con Sql Server + API Web",
+                "overview": "Uso de formularios reactivos, validaciones, manejo de errores, Entity Framework y arquitectura en capas clásica."
             },
-            "project-2": {
-                "title": "Clon de Twitter",
-                "overview": "CRUD de posts de Twitter con Next.js y Supabase."
+            "2": {
+                "title": "Clon de Posts de X con Next.js y Supabase",
+                "overview": "Uso de Supabase para almacenamiento de datos, autenticación con Github, generación de tipos y políticas de acceso."
             }
         }
     }
