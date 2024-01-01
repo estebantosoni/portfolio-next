@@ -6,6 +6,7 @@
     "homepage": {
         "title": "Home",
         "description": "Hello! My name is Esteban. I am an Argentine developer passionate about programming and is looking for challenges.",
+        "field": "Backend Developer",
         "education-title": "Education",
         "skills-title": "Skills",
         "education-description": "I am a Systems Analyst having studied at the Instituto Politecnico Superior 'Gral. San Martin'.",
@@ -18,7 +19,7 @@
         "my-projects": {
             "1": {
                 "title": "Angular CRUD with SQL Server + Web API",
-                "overview": "Using reactive forms, validations, error handling, Entity Framework and classic layered architecture."
+                "overview": "Using reactive forms, validations, error handling, Entity Framework, LINQ and classic layered architecture."
             },
             "2": {
                 "title": "X Posts Clone with Next.js and Supabase",

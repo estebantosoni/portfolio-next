@@ -6,6 +6,7 @@
     "homepage": {
         "title": "Inicio",
         "description": "Hola! Me llamo Esteban. Soy un desarrollador argentino apasionado por la programacion y que va en busca de desafíos.",
+        "field": "Desarrollador Backend",
         "education-title": "Educación",
         "skills-title": "Habilidades",
         "education-description": "Estoy recibido de Analista de Sistemas habiendo estudiado en el Instituto Politecnico Superior 'Gral. San Martin'.",
@@ -18,7 +19,7 @@
         "my-projects": {
             "1": {
                 "title": "CRUD en Angular con Sql Server + API Web",
-                "overview": "Uso de formularios reactivos, validaciones, manejo de errores, Entity Framework y arquitectura en capas clásica."
+                "overview": "Uso de formularios reactivos, validaciones, manejo de errores, Entity Framework, LINQ y arquitectura en capas clásica."
             },
             "2": {
                 "title": "Clon de Posts de X con Next.js y Supabase",

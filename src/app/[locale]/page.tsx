@@ -30,6 +30,7 @@ export default function Home() {
   const t = useTranslations("homepage");
   const phrasesToHighlightEducation = ['Analista de Sistemas', 'Systems Analyst'];
   const phrasesToHighlightSkills = ['NET'];
+  const phrasesToHighlightField = ['Backend'];
 
   return (
     <div className="divide-y divide-gray-100 dark:divide-gray-700">
@@ -42,12 +43,25 @@ export default function Home() {
         <div className="flex flex-col items-center align-top pt-8">
           <Image src={Me} alt="Pic" priority className='h-48 w-48 rounded-full object-cover object-top'/>
           <h2 className='pt-4 pb-2 text-2xl font-bold leading-8'>
-            Backend <span className="text-teal-500">Developer</span>
+          {highlightPhrases(t('field'), phrasesToHighlightField, 'text-teal-500')}
           </h2>
           <p className='text-gray-500 dark:text-gray-300 text-center'>
             {t("description")}
           </p>
           <div className='flex space-x-5 pt-5'>
+          <a href="mailto:tosoniesteban@gmail.com" aria-label="Send me a message" target='_blank'>
+            <svg
+              viewBox="0 0 1024 1024"
+              fill="currentColor"
+              className='w-8 h-8 text-teal-500 hover:text-teal-600'
+            >
+              <path d="M928 160H96c-17.7 0-32 14.3-32 32v640c0 17.7 14.3 32 32 32h832c17.7 
+              0 32-14.3 32-32V192c0-17.7-14.3-32-32-32zm-40 110.8V792H136V270.8l-27.6-21.5 
+              39.3-50.5 42.8 33.3h643.1l42.8-33.3 39.3 50.5-27.7 21.5zM833.6 232L512 482 
+              190.4 232l-42.8-33.3-39.3 50.5 27.6 21.5 341.6 265.6a55.99 55.99 0 0068.7 
+              0L888 270.8l27.6-21.5-39.3-50.5-42.7 33.2z" />
+            </svg>
+            </a>
             <a href="https://github.com/estebantosoni" aria-label="Take a look at the projects" target='_blank'>
             <svg
               viewBox="0 0 1024 1024"
