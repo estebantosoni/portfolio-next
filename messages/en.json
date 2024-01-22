@@ -18,8 +18,8 @@
         "learn-more": "Learn More!",
         "my-projects": {
             "1": {
-                "title": "Angular CRUD with SQL Server + Web API",
-                "overview": "Using reactive forms, validations, error handling, Entity Framework, LINQ and classic layered architecture."
+                "title": "BookStore",
+                "overview": "Layered project using ASP.NET MVC, SQL Server, LinQ and Validations."
             },
             "2": {
                 "title": "X Posts Clone with Next.js and Supabase",

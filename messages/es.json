@@ -18,8 +18,8 @@
         "learn-more": "Echa un vistazo!",
         "my-projects": {
             "1": {
-                "title": "CRUD en Angular con Sql Server + API Web",
-                "overview": "Uso de formularios reactivos, validaciones, manejo de errores, Entity Framework, LINQ y arquitectura en capas clásica."
+                "title": "Tienda de Libros",
+                "overview": "Proyecto en capas usando ASP.NET MVC, SQL Server, LinQ y Validaciones."
             },
             "2": {
                 "title": "Clon de Posts de X con Next.js y Supabase",
