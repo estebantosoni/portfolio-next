@@ -18,12 +18,20 @@
         "learn-more": "Learn More!",
         "my-projects": {
             "1": {
-                "title": "BookStore",
-                "overview": "Layered project using ASP.NET MVC, SQL Server, LinQ and Validations."
+                "title": "Book Store",
+                "overview": "Layered project using ASP.NET MVC Core, Entity Framework Core, SQL Server, LinQ, Stripe to make payments, and Validations."
             },
             "2": {
-                "title": "X Posts Clone with Next.js and Supabase",
-                "overview": "Use of Supabase for data storage, authentication with Github, generation of types and access policies."
+                "title": "Bootcamp Projects",
+                "overview": "Angular CRUD with ASP.NET Framework / Web API (public API and API from scratch)"
+            },
+            "3": {
+                "title": "X Posts Clone",
+                "overview": "Project with Next.js and Supabase. Supabase is used to store data, authenticate via Github, generate types and create access policies."
+            },
+            "4": {
+                "title": "Clothing Store",
+                "overview": "Project with Angular CLI and Java with Spring"
             }
         }
     }

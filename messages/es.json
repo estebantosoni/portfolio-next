@@ -19,12 +19,21 @@
         "my-projects": {
             "1": {
                 "title": "Tienda de Libros",
-                "overview": "Proyecto en capas usando ASP.NET MVC, SQL Server, LinQ y Validaciones."
+                "overview": "Proyecto en capas usando ASP.NET MVC Core, Entity Framework Core, SQL Server, LinQ, Stripe para realizar pagos y Validaciones."
             },
             "2": {
-                "title": "Clon de Posts de X con Next.js y Supabase",
-                "overview": "Uso de Supabase para almacenamiento de datos, autenticación con Github, generación de tipos y políticas de acceso."
+                "title": "Projectos de Bootcamp",
+                "overview": "Angular CRUD con ASP.NET Framework y SQL Server / Web API (API pública y API desde cero)"
+            },
+            "3": {
+                "title": "Clon de Posts de X",
+                "overview": "Projecto con Next.js y Supabase. Se utiliza Supabase para almacenar datos, autenticar a través de Github, generar tipos y crear políticas de acceso."
+            },
+            "4": {
+                "title": "Tienda de Indumentaria",
+                "overview": "Projecto con Angular CLI y Java con Spring."
             }
+            
         }
     }
 }
