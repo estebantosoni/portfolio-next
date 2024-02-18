@@ -10,7 +10,7 @@
         "education-title": "Education",
         "skills-title": "Skills",
         "education-description": "I am a Systems Analyst having studied at the Instituto Politecnico Superior 'Gral. San Martin'.",
-        "skills-description": "I master technologies in the .NET environment and seek to specialize more and more. However, I am always open to learning new technologies and looking for ways to do something practical and useful with them."
+        "skills-description": "I focus on technologies in the .NET environment. I want to specialize in that area and I want to do something practical and useful with the knowledge acquired."
     },
     "proyects": {
         "header": "Proyects",
@@ -29,10 +29,14 @@
                 "title": "X Posts Clone",
                 "overview": "Project with Next.js and Supabase. Supabase is used to store data, authenticate via Github, generate types and create access policies."
             },
-            "4": {
+            "4":{
+                "title": "Hotel Reservation",
+                "overview": "API from scratch using .NET, ASP.NET Core as front and SQL Server for the database."
+            },
+            "5": {
                 "title": "Clothing Store",
                 "overview": "Project with Angular CLI and Java with Spring"
-            }
+            } 
         }
     }
 }

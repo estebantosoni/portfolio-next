@@ -32,7 +32,7 @@ export default async function Projects(){
 
     const projectList: Project[] = []
 
-    for (let index = 0; index < 4; index++) {
+    for (let index = 0; index < 5; index++) {
         const project: Project = {
             id: index + 1,
             title: t(`my-projects.${index + 1}.title`),
